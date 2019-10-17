@@ -4,20 +4,13 @@
         <ns1:StringActionResponse xmlns:ns1="http://string.drv.de/String">
             <StringMessageResponse xmlns:ns2="http://string.drv.de/xmlschema/string/v0" xmlns:ns3="http://string.drv.de/xmlschema/string">
                 <ns3:RoutingHeader>
-                    <ns3:OperatorSystemCode>ZENTA</ns3:OperatorSystemCode>
-                    <ns3:OperatorSystemRouting>TOUR</ns3:OperatorSystemRouting>
                     <ns3:GdsAgency>123</ns3:GdsAgency>
                 </ns3:RoutingHeader>
                 <ns3:Payload>
-                    <ns3:Version>v0</ns3:Version>
                     <ns3:Content>
                         <ns3:StringResponse Success="true">
-                            <ns2:Requestor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                            <ns2:MessageContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                             <ns2:ActionResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:RetrieveBookingResponseType">
                                 <ns2:Status>
-                                    <ns2:ProcessState>BookingPossible</ns2:ProcessState>
-                                    <ns2:TransactionState>OK</ns2:TransactionState>
                                     <ns2:BookingState>OK</ns2:BookingState>
                                 </ns2:Status>
                                 <ServicesResponseType>
@@ -26,55 +19,9 @@
                                             <ns2:Type>HOTEL</ns2:Type>
                                             <ns2:StartDate>2019-11-01</ns2:StartDate>
                                             <ns2:EndDate>2019-11-10</ns2:EndDate>
-                                            <Integer>1</Integer>
-                                            <ns2:Product>
-                                                <ns2:Code>ABER02022 XXX</ns2:Code>
-                                            </ns2:Product>
-                                            <ns2:State>OK</ns2:State>
-                                            <AccommodationRoomsResponseType>
-                                                <ns2:Room>
-                                                    <ns2:RoomCode>
-                                                        <ns2:Code>DI</ns2:Code>
-                                                        <ns2:Description>
-                                                            <ns2:LanguageCode>DE</ns2:LanguageCode>
-                                                            <ns2:Headline>Doppelzimmer</ns2:Headline>
-                                                        </ns2:Description>
-                                                    </ns2:RoomCode>
-                                                </ns2:Room>
-                                            </AccommodationRoomsResponseType>
-                                            <ns2:Stay xsi:nil="true"/>
                                         </ns2:Details>
                                     </ns2:Service>
                                 </ServicesResponseType>
-                                <ns2:TravellerList>
-                                    <ns2:Traveller>
-                                        <ns2:TravellerDetails>
-                                            <GenderType>Male</GenderType>
-                                            <AgeCategoryType>Adult</AgeCategoryType>
-                                        </ns2:TravellerDetails>
-                                        <ns2:Address>
-                                            <ns2:Surname>CARLOS</ns2:Surname>
-                                            <ns2:GivenName>KEN</ns2:GivenName>
-                                            <SalutationType>Mr</SalutationType>
-                                        </ns2:Address>
-                                    </ns2:Traveller>
-                                    <ns2:Traveller>
-                                        <ns2:TravellerDetails>
-                                            <GenderType>Female</GenderType>
-                                            <AgeCategoryType>Adult</AgeCategoryType>
-                                        </ns2:TravellerDetails>
-                                        <ns2:Address>
-                                            <ns2:Surname>TINA</ns2:Surname>
-                                            <ns2:GivenName>KEN</ns2:GivenName>
-                                            <SalutationType>Mrs</SalutationType>
-                                        </ns2:Address>
-                                    </ns2:Traveller>
-                                </ns2:TravellerList>
-                                <ns2:BookingDetails>
-                                    <BookingReferenceType>
-                                        <ns2:BookingNumber>123456789</ns2:BookingNumber>
-                                    </BookingReferenceType>
-                                </ns2:BookingDetails>
                             </ns2:ActionResult>
                         </ns3:StringResponse>
                     </ns3:Content>
