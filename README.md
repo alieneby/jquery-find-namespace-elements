@@ -1,9 +1,18 @@
 # jquery-find-namespace-elements
 Javascript jQuery - find element tags with namespaces 
 
+---
+## Installation
+Just include the jquery.findNSElement.js AFTER jquery script.
+````javascript
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="jquery.findNSElement.js"></script>
+````
 
 
-Example:
+---
+
+##Example Soap xml:
 
 ```xml
 <?xml version="1.0"?>
@@ -40,7 +49,7 @@ Example:
 </soap:Envelope>
 ```
 
-Get values:
+###Get values:
 ````javascript
 var jqXml = $( $.parseXML( "<?xml....</soap:Envelope>") );
 
@@ -54,7 +63,7 @@ str = $( jqXml ).filterNSAttributes( "xsi:type", "AccommodationResponseType" )
                 .findNSElements("StartDate").text()
 ````
 
-Set value:
+###Set value:
 ````javascript
 var jqXml = $( $.parseXML( "<?xml....</soap:Envelope>") );
 
