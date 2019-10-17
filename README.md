@@ -44,14 +44,14 @@ Get values:
 ````javascript
 var jqXml = $( $.parseXML( "<?xml....</soap:Envelope>") );
 
-$( jqXml ).findNSElements( 'GdsAgency' ).text();
+var str = $( jqXml ).findNSElements( 'GdsAgency' ).text();
 
-$( jqXml ).findNSElements( 'ns3:GdsAgency' ).text()
+str = $( jqXml ).findNSElements( 'ns3:GdsAgency' ).text()
 
-$( jqXml ).findNSElements( 'Body GdsAgency' ).text()
+str = $( jqXml ).findNSElements( 'Body GdsAgency' ).text()
 
-$( jqXml ).filterNSAttributes( "xsi:type", "AccommodationResponseType" )
-          .findNSElements("StartDate").text()
+str = $( jqXml ).filterNSAttributes( "xsi:type", "AccommodationResponseType" )
+                .findNSElements("StartDate").text()
 ````
 
 Set value:
