@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>SOAP!</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="jquery.findNSElement.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<h1>SOAP!</h1>
+
+<pre></pre>
+<textarea style="width:100%; height: 500px"></textarea>
+<script type="application/javascript">
+    $(document).ready(function() {
+        $.get('example1-soap.xml', function( jqXml ) {
+
+            var strOutput = '';
+
+            strOutput += ".findNSElements('ns3:GdsAgency'): "
+                      + $( jqXml ).findNSElements( 'ns3:GdsAgency' ).text()
+                      + "\n\n\n";
+
+            strOutput += ".findNSElements('GdsAgency'): "
+                      + $( jqXml ).findNSElements( 'GdsAgency' ).text()
+                      + "\n\n\n";
+
+            strOutput += ".findNSElements('soap:Body ns3:GdsAgency'): "
+                      + $( jqXml ).findNSElements( 'soap:Body ns3:GdsAgency' ).text()
+                      + "\n\n\n";
+
+            strOutput += ".findNSElements('Body ns3:GdsAgency'): "
+                      + $( jqXml ).findNSElements( 'Body ns3:GdsAgency' ).text()
+                      + "\n\n\n";
+
+            strOutput += ".filterNSAttributes('xsi:type', 'AccommodationResponseType')\n     .findNSElements('StartDate'): "
+                + $( jqXml ).filterNSAttributes( "xsi:type", "AccommodationResponseType" )
+                    .findNSElements("StartDate").text()
+                + "\n";
+
+
+            $('pre').text( strOutput );
+
+            $('textarea').text( $( jqXml ).findNSElements( "soap:Envelope" ).html() );
+        } );
+    } );
+</script>
+
+
+</body>
+</html>
