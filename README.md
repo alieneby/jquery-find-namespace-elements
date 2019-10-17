@@ -12,7 +12,7 @@ Just include the jquery.findNSElement.js AFTER jquery script.
 
 ---
 
-##Example Soap xml:
+## Example Soap xml:
 
 ```xml
 <?xml version="1.0"?>
@@ -49,7 +49,7 @@ Just include the jquery.findNSElement.js AFTER jquery script.
 </soap:Envelope>
 ```
 
-###Get values:
+### Get values:
 ````javascript
 var jqXml = $( $.parseXML( "<?xml....</soap:Envelope>") );
 
@@ -63,7 +63,7 @@ str = $( jqXml ).filterNSAttributes( "xsi:type", "AccommodationResponseType" )
                 .findNSElements("StartDate").text()
 ````
 
-###Set value:
+### Set value:
 ````javascript
 var jqXml = $( $.parseXML( "<?xml....</soap:Envelope>") );
 
